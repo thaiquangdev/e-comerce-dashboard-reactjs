@@ -5,19 +5,18 @@ const axiosInstance = axios.create({
   withCredentials: true,
 });
 
-// Thêm interceptor để tự động thêm access token vào header
-// axiosInstance.interceptors.request.use(
-//   function (config) {
-//     const token = localStorage.getItem("token");
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//       return config;
-//     } else return config;
-//   },
-//   function (error) {
-//     return Promise.reject(error);
-//   }
-// );
+axiosInstance.interceptors.request.use(
+  function (config) {
+    const token = localStorage.getItem("token"); // Lấy token từ localStorage
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`; // Thêm token vào header Authorization
+    }
+    return config; // Trả về config đã sửa đổi
+  },
+  function (error) {
+    return Promise.reject(error); // Trả về lỗi nếu có vấn đề xảy ra trong request
+  }
+);
 
 // Thêm interceptor để xử lý lỗi và làm mới token nếu cần
 // axiosInstance.interceptors.request.use(

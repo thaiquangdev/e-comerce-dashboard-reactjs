@@ -5,6 +5,8 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import { Toaster } from "react-hot-toast";
+import CreateCategory from "./pages/categories/create-category";
+import CreateProduct from "./pages/products/create-product";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path={path.REGISTER} element={<Register />} />
         <Route path={path.HOME} element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path={path.CREATE_CATEGORY} element={<CreateCategory />} />
+          <Route path={path.CREATE_PRODUCT} element={<CreateProduct />} />
         </Route>
       </Routes>
       <Toaster />

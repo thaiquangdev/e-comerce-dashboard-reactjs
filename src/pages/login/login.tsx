@@ -20,6 +20,7 @@ const Login = () => {
     e.preventDefault();
     const response = await loginApi(formData);
     if (response.data.status === "success") {
+      localStorage.setItem("token", response.data.token);
       navigation("/");
     }
     if (response.data.status === "error") {

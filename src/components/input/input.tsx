@@ -1,10 +1,12 @@
 interface InputProps {
   type: string;
   classN: string;
-  place: string;
+  name?: string;
+  place?: string;
   val?: string;
+  multiple?: boolean;
   onCh?: React.ChangeEventHandler<HTMLInputElement>;
-  id: string;
+  id?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -14,15 +16,19 @@ const Input: React.FC<InputProps> = ({
   val,
   id,
   onCh,
+  multiple,
+  name,
 }) => {
   return (
     <input
+      name={name}
       id={id}
       type={type}
       className={classN}
       placeholder={place}
       value={val}
       onChange={onCh}
+      multiple={multiple}
     />
   );
 };

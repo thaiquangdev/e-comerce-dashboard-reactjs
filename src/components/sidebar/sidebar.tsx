@@ -49,7 +49,7 @@ const Sidebar = () => {
                           key={subIndex}
                           className="text-sm text-[#adb5bd] px-8 py-2"
                         >
-                          <span>{subItem.title}</span>
+                          <Link to={subItem.link}>{subItem.title}</Link>
                         </li>
                       ))}
                     </ul>

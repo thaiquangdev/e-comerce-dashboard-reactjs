@@ -26,15 +26,19 @@ export const menuItems = [
     child: [
       {
         title: "Danh sách",
+        link: "/products",
       },
       {
         title: "Chi tiết",
+        link: "/product/slug",
       },
       {
         title: "Cập nhật",
+        link: "/product/id",
       },
       {
         title: "Tạo mới",
+        link: "/create-product",
       },
     ],
   },
@@ -45,12 +49,15 @@ export const menuItems = [
     child: [
       {
         title: "Danh sách",
+        link: "/product/categories",
       },
       {
         title: "Cập nhật",
+        link: "/product/id",
       },
       {
         title: "Tạo mới",
+        link: "/create-category",
       },
     ],
   },
@@ -61,15 +68,19 @@ export const menuItems = [
     child: [
       {
         title: "Danh sách",
+        link: "/orders",
       },
       {
         title: "Chi tiết",
+        link: "/cart/id",
       },
       {
         title: "Giỏ hàng",
+        link: "/cart",
       },
       {
         title: "Thanh toán",
+        link: "/checkout",
       },
     ],
   },
@@ -84,12 +95,15 @@ export const menuItems = [
     child: [
       {
         title: "Danh sách",
+        link: "/users",
       },
       {
         title: "Cập nhật",
+        link: "/users/id",
       },
       {
         title: "Tạo mới",
+        link: "/create-user",
       },
     ],
   },
@@ -100,9 +114,11 @@ export const menuItems = [
     child: [
       {
         title: "Danh sách",
+        link: "/customers",
       },
       {
         title: "Chi tiết",
+        link: "/customers/id",
       },
     ],
   },
